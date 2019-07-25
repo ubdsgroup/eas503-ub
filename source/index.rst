@@ -8,7 +8,7 @@ Programming and Database Fundamentals for Data Scientists (EAS 503)
 
 `School of Engineering and Applied Sciences <http://www.seas.buffalo.edu/>`_, University at Buffalo 
 
-Fall Semester 2018
+Fall Semester 2019
 
 .. toctree::
    :maxdepth: 2
@@ -18,22 +18,16 @@ Fall Semester 2018
 Instructors
 ------------
 
+* `Mohammad Zia <http://www.buffalo.edu/ccr/about-us/people/staff/zia.html>`_ (co-lead instructor; mkzia[at]buffalo.edu)
+
 * `Varun Chandola <http://www.cse.buffalo.edu/~chandola>`_ (lead instructor; chandola[at]buffalo.edu)
-
-* `Razie Fathi <http://www.cse.buffalo.edu>`_ (instructor; raziehfa[at]buffalo.edu)
-
-* `Sreelekha Guggilam <http://www.buffalo.edu/directory/user/sreelekh?query=lam&affiliation=&qualifier=general&perpage=10&start=10>`_ (teaching assistant; sreelekh[at]buffalo.edu) 
-
-* `Jerry Li <http://www.buffalo.edu/directory/user/sreelekh?query=lam&affiliation=&qualifier=general&perpage=10&start=10>`_ (teaching assistant; jli[at]buffalo.edu) 
 
 Meeting times and locations
 ----------------------------
-* Tuesdays, Thursdays: 11.00 AM - 12.30 PM, Chandola: 104 Knox Hall, Fathi: 250 Bell Hall.
+* Tuesdays, Thursdays: Chandola: 11.00 AM - 12.20 PM, 104 Knox Hall; Zia: 7.00 PM  - 9.30 PM, 04 Knox Hall.
 
+* Zia Office Hours: TBA 
 * Chandola Office Hours: Tuesdays, 1.00 PM - 3.00 PM, 213 Capen Hall.
-* Fathi Office Hours: TBA 
-* Lekha Office Hours: Tuesdays and Thursdays, 9.00 AM - 11.00 AM, 250 Bell Hall. 
-* Jerry Office Hours: Mondays and Wednesdays, 2.00 PM - 4.00 PM, 250 Bell Hall.
 
 Prerequisites
 ---------------
