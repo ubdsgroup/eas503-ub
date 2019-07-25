@@ -24,7 +24,8 @@ Instructors
 
 Meeting times and locations
 ----------------------------
-* Tuesdays, Thursdays: Chandola: 11.00 AM - 12.20 PM, 104 Knox Hall; Zia: 7.00 PM  - 9.30 PM, 04 Knox Hall.
+* Zia: Wednesdays, 7.00 PM  - 9.30 PM, 04 Knox Hall.
+* Chandola: Tuesdays, Thursdays, 11.00 AM - 12.20 PM, 104 Knox Hall.
 
 * Zia Office Hours: TBA 
 * Chandola Office Hours: Tuesdays, 1.00 PM - 3.00 PM, 213 Capen Hall.
