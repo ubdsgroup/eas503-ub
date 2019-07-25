@@ -1,0 +1,67 @@
+/* General grid styles */
+.cbp-ig-grid {
+	list-style: none;
+	padding: 0 0 10px 0;
+	margin: 0;
+	background-color: #ffffff;
+}
+
+/* Clear floats */
+.cbp-ig-grid:before, 
+.cbp-ig-grid:after { 
+	content: " "; 
+	display: table; 
+}
+
+.cbp-ig-grid:after { 
+	clear: both; 
+}
+
+/* grid item */
+.cbp-ig-grid li {
+	width: 33%;
+	list-style: none;
+	float: left;
+	height: 100px;
+	text-align: center;
+	border-top: 1px solid #ddd;
+}
+
+.cbp-ig-grid i {
+  padding: 6px;
+}
+/* we are using a combination of borders and box shadows to control the grid lines */
+.cbp-ig-grid li:nth-child(-n+3){
+	border-top: none;
+}
+
+.cbp-ig-grid li:nth-child(3n-1),
+.cbp-ig-grid li:nth-child(3n-2) {
+	box-shadow: 1px 0 0 #ddd;
+}
+
+/* anchor style */
+.cbp-ig-grid li > a {
+	list-style: none;
+  opacity: 1;
+  display: block;
+  height: 100%;
+  color: #000000;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  -moz-transition: -moz-transform 0.5s ease;
+  transition: transform 0.5s ease;
+}
+/* Hover styles */
+.cbp-ig-grid li > a:hover {
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  transform: scale(1.25);
+  -webkit-transform-origin: center;
+  -moz-transform-origin: center;
+  -o-transform-origin: center;
+  transform-origin: center;
+  color: #ffffff;
+  background-color: #005bbb;
+}
+
