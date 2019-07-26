@@ -100,6 +100,7 @@ Expectations
 * Late submission of assignments will receive a grade of zero.
 * Students are encouraged to discuss assignments and share ideas, but each student must independently write and submit their own solution.
 * Makeup exams will be given in the following circumstances only: 
+
   #. You contact the instructor prior to the exam
   #. You have a valid and documented reason to miss the exam
 
