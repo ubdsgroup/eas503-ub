@@ -85,6 +85,10 @@ Class schedule
    :header: "Week", "Topic", "Deliverable"
    :widths: 6, 24, 20
 
+.. note::
+
+   Homework 0 will not be graded.
+
 How to submit homeworks
 ------------------------
 We will use the `Jupyter nbgrader <https://github.com/jupyter/nbgrader>`_ for administering the labs and homeworks. More details will be provided in the class. 
