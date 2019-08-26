@@ -1,0 +1,21 @@
+1,:download:`Course Introduction <CourseIntroduction.pdf>`,:red:`Homework 0`
+,`Programming Basics <https://mcsp.wartburg.edu/zelle/python/ppics3/slides/Chapter01.pptx>`_,
+,`Simple Programming with Python <https://mcsp.wartburg.edu/zelle/python/ppics3/slides/Chapter02.pptx>`_,
+,`Computing with Numbers <https://mcsp.wartburg.edu/zelle/python/ppics3/slides/Chapter03.pptx>`_,
+2,`Sequences <https://mcsp.wartburg.edu/zelle/python/ppics3/slides/Chapter05.pptx>`_,:red:`Homework 1`
+,`Functions <https://mcsp.wartburg.edu/zelle/python/ppics3/slides/Chapter06.pptx>`_,
+3,`Decision Structures <https://mcsp.wartburg.edu/zelle/python/ppics3/slides/Chapter07.pptx>`_,:red:`Homework 2`
+,`Loops Structures and Booleans <https://mcsp.wartburg.edu/zelle/python/ppics3/slides/Chapter08.pptx>`_,; :blue:`Lab 1`
+4,`Classes <https://mcsp.wartburg.edu/zelle/python/ppics3/slides/Chapter10.pptx>`_,:red:`Homework 3`
+,`Data Collections <https://mcsp.wartburg.edu/zelle/python/ppics3/slides/Chapter11.pptx>`_,
+5,`Object- Oriented Design <https://mcsp.wartburg.edu/zelle/python/ppics3/slides/Chapter12.pptx>`_,:red:`Homework 4` 
+6,**Catch up week**,:red:`Homework 5`
+7,Introduction to Databases,:red:`Homework 6`; :blue:`Lab 2`
+8,Using Database SQLite,:red:`Homework 7`
+9,Integrating DB with Python,:red:`Homework 8`
+10,Working with data (``numpy`` and ``pandas``),:red:`Homework 9`; :blue:`Lab 3`
+11,Visualizing data (``matplotlib`` and ``seaborn``),:red:`Homework 10`
+12,Analyzing data (``scikit-learn``),:red:`Homework 11`
+13,Scientific and statistical analysis (``scipy``),:red:`Homework 12`; :blue:`Lab 4` 
+14,**Catch up week** (*Fall Recess*),
+14,Project Presentations, 

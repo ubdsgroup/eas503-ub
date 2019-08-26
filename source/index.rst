@@ -6,6 +6,11 @@
 Programming and Database Fundamentals for Data Scientists (EAS 503)
 ====================================================================
 
+.. raw:: html
+
+    <style> .red {color:red} </style>
+    <style> .blue {color:blue} </style>
+
 `School of Engineering and Applied Sciences <http://www.seas.buffalo.edu/>`_, University at Buffalo 
 
 Fall Semester 2019
@@ -36,7 +41,23 @@ None
 
 Course materials
 ----------------
-`Jupyter Notebooks <http://nbviewer.jupyter.org/github/ubdsgroup/eas503ubcourse/tree/master/notebooks/>`_
+`Jupyter Notebooks <https://github.com/ubdsgroup/eas503-ub/tree/master/notebooks>`_
+
+Online forum
+-------------
+Piazza Page - https://piazza.com/class/jzsaki60rv25uu
+
+.. note:: 
+
+   We will use Piazza as our primary mode of communication with the students. Students are strongly encouraged to use Piazza to communicate with the instructors (through ``private`` messages) and with rest of the class (through ``public`` posts)
+
+Classroom management
+---------------------
+UBLearns - https://ublearns.buffalo.edu/webapps/blackboard/execute/modulepage/view?course_id=_166080_1&cmp_tab_id=_179339_1&editMode=true&mode=cpview
+
+.. note:: 
+
+   We will use UBLearns to distribute grades and as a repository for the recorded classroom lectures.
 
 Course Texts
 ---------------
@@ -45,52 +66,28 @@ Course Texts
 
 Grading
 ---------
-* Programming Assignments (4) - 10% each
-* Final Exam - 30%
+* Programming Labs (4) - 30%
+* Homeworks (12) - 40%
 * Final Project - 30%
 
 Final Exam
 ---------------
-TBA
+* Chandola - 12/10/2019, Tuesday, 08.00 AM - 11.00 AM, Baldy 101/108
+* Zia - TBA 
 
 Class schedule
 ---------------
+.. role:: red
+.. role:: blue 
 
-==== ============================================================================= ===========================================
-Week             Topic                                                              Homework assigned                    
-==== ============================================================================= ===========================================
-* Introduction*
-------------------------------------------------------------------------------------------------------------------------------
-1    :download:`Course Introduction <CourseIntroduction.pdf>`                    
-*Programming Fundamentals in Python*
-------------------------------------------------------------------------------------------------------------------------------
-1    :download:`Programming Basics <Introduction.pptx>`                            
-2    :download:`Data Types <PythonDataTypes.pdf>`                                  Homework 1
-3    :download:`Control Structures <ControlStructures.pdf>`
-4    :download:`Built-in Functions <BuiltinFunctions.pdf>`
-5    Modules                                             
-6    :download:`Classes  <Classes.pdf>`                                             Homework 2
-*Python Libraries*
-------------------------------------------------------------------------------------------------------------------------------
-7    NumPy                           
-8    Pandas                    
-9    Matplotlib/Seaborn 
-10   Scikit-learn                                                                  Homework 3 
-11   ScipPy                                                                        Homework 3 
-*Database Fundamentals*
-------------------------------------------------------------------------------------------------------------------------------
-12    :download:`Relational Database Basics <DatabaseIntroduction.pdf>`            Project Release
-13    :download:`Relational Algebra <RelationalAlgebra.ppt>`
-14   :download:`Database Indexes <Index.ppt>`
-*Database Programming*
-------------------------------------------------------------------------------------------------------------------------------
-15    :download:`Using SQL <SQL.ppt>`                                              Homework 4
-16   :download:`Embedding SQL in Python <PythonSQL.ppt>`                           Project Demos
-==== ============================================================================= ===========================================
+.. csv-table:: 
+   :file: topics.csv
+   :header: "Week", "Topic", "Deliverable"
+   :widths: 6, 24, 20
 
 How to submit homeworks
 ------------------------
-TBA
+We will use the `Jupyter nbgrader <https://github.com/jupyter/nbgrader>`_ for administering the labs and homeworks. More details will be provided in the class. 
 
 Expectations
 -------------
@@ -106,8 +103,28 @@ Expectations
 
 Accessibility Services and Special Needs
 -----------------------------------------
-If you have a disability and may require some type of instructional and/or examination accommodation, please inform me early in the semester so that we can coordinate the accommodations you may need. If you have not already done so, please contact the Office of Accessibility Services (formerly the Office of Disability Services) University at Buffalo, 25 Capen Hall, Buffalo, NY 14260-1632; email: stu-accessibility@ buffalo.edu Phone: 716-645-2608 (voice); 716-645-2616 (TTY); Fax: 716-645-3116; and on the web at http://www.buffalo.edu/accessibility/. All information and documentation is confidential. The University at Buffalo and the School of Engineering and Applied Sciences are committed to ensuring equal opportunity for persons with special needs to participate in and benefit from all of its programs, services and activities.
+If you have any disability which requires reasonable accommodations to enable you to participate in this course, please contact the Office of Accessibility Resources in 60 Capen Hall, 716-645-2608 and also the instructor of this course during the first week of class. The office will provide you with information and review appropriate arrangements for reasonable accommodations, which can be found on the web at: http://www.buffalo.edu/studentlife/who-we-are/departments/accessibility.html.
 
 Academic Integrity
 -------------------
-This course will operate with a zero-tolerance policy regarding cheating and other forms of academic dishonesty. Any act of academic dishonesty will subject the student to penalty, including the high probability of failure of the course (i.e., assignment of a grade of “F”). It is expected that you will behave in an honorable and respectful way as you learn and share ideas. Therefore, recycled papers, work submitted to other courses, and major assistance in preparation of assignments without identifying and acknowledging such assistance are not acceptable. All work for this course must be original for this course. Additionally, you are not allowed to post course homeworks, exams, solutions, etc., on a public forum. Please be familiar with the University and the School policies regarding plagiarism. Read the Academic Integrity Policy and Procedure for more information: http://undergrad-catalog.buffalo.edu/policies/course/integrity.shtml. Visit the Senior Vice Provost for Academic Affairs web page for the latest information at http://vpue.buffalo.edu/policies/
+Academic integrity is a fundamental university value. Through the honest completion of academic work, students sustain the integrity of the university and of themselves while facilitating the university's imperative for the transmission of knowledge and culture based upon the generation of new and innovative ideas. For more information, please refer to the `Graduate Academic Integrity policy <https://grad.buffalo.edu/succeed/current-students/policy-library.html#academic-integrity>`_.
+
+This course will operate with a zero-tolerance policy regarding cheating and other forms of academic dishonesty. Any act of academic dishonesty will subject the student to penalty, including the high probability of failure of the course (i.e., assignment of a grade of “F”). It is expected that you will behave in an honorable and respectful way as you learn and share ideas. Therefore, recycled papers, work submitted to other courses, and major assistance in preparation of assignments without identifying and acknowledging such assistance are not acceptable. All work for this course must be original for this course. Additionally, you are not allowed to post course homeworks, exams, solutions, etc., on a public forum. Please be familiar with the University and the School policies regarding plagiarism.
+
+.. admonition:: **Data Science Honor Code**
+
+   By enrolling into this class, you are implicitly bound to the Data Science Honor Code. It is against the DS honor code to:
+
+   1. Collaborate on homeworks and programming labs 
+   2. Collaborate or cheat during exams
+   3. Submit someone else’s work, including from the internet, as one’s own for any submission
+   4. Misuse Piazza forum
+
+   You are allowed to:
+   
+   1. Have discussions about homeworks and programming labs. Every student should submit own homework with names of students in the discussion group explicitly mentioned.
+   2. Collaborate in groups of 2 or 3 for the projects. One submission is required for each group.
+
+.. warning:: 
+   * Violation of DS honor code and departmental policy will result in an automatic F for the concerned submission
+   * Two violations ⇒ fail grade in the course
