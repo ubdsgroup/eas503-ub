@@ -23,17 +23,21 @@ Fall Semester 2019
 Instructors
 ------------
 
+* `Varun Chandola <http://www.cse.buffalo.edu/~chandola>`_ (lead instructor; chandola[at]buffalo.edu)
+
 * `Mohammad Zia <http://www.buffalo.edu/ccr/about-us/people/staff/zia.html>`_ (co-lead instructor; mkzia[at]buffalo.edu)
 
-* `Varun Chandola <http://www.cse.buffalo.edu/~chandola>`_ (lead instructor; chandola[at]buffalo.edu)
+* `Jiarui Liu <>`_ (teaching assistant; jliu239[at]buffalo.edu)
+
 
 Meeting times and locations
 ----------------------------
-* Zia: Wednesdays, 7.00 PM  - 9.30 PM, 04 Knox Hall.
 * Chandola: Tuesdays, Thursdays, 11.00 AM - 12.20 PM, 104 Knox Hall.
+* Zia: Wednesdays, 7.00 PM  - 9.30 PM, 04 Knox Hall.
 
-* Zia Office Hours: TBA 
 * Chandola Office Hours: Tuesdays, 1.00 PM - 3.00 PM, 213 Capen Hall.
+* Zia Office Hours: TBA 
+* Liu Office Hours: TBA
 
 Prerequisites
 ---------------
