@@ -27,7 +27,7 @@ Instructors
 
 * `Mohammad Zia <http://www.buffalo.edu/ccr/about-us/people/staff/zia.html>`_ (co-lead instructor; mkzia[at]buffalo.edu)
 
-* `Jiarui Liu <>`_ (teaching assistant; jliu239[at]buffalo.edu)
+* `Jiarui Liu <http://www.buffalo.edu/computational-data-enabled-science-engineering.html>`_ (teaching assistant; jliu239[at]buffalo.edu)
 
 
 Meeting times and locations
