@@ -35,6 +35,8 @@ Meeting times and locations
 * Chandola: Tuesdays, Thursdays, 11.00 AM - 12.20 PM, 104 Knox Hall.
 * Zia: Wednesdays, 7.00 PM  - 9.30 PM, 04 Knox Hall.
 
+Office Hours
+-------------
 * Chandola Office Hours: Tuesdays, 1.00 PM - 3.00 PM, 213 Capen Hall.
 * Zia Office Hours: TBA 
 * Liu Office Hours: TBA
