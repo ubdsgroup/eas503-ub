@@ -97,7 +97,9 @@ Class schedule
 
 How to submit homeworks
 ------------------------
-We will use the `Jupyter nbgrader <https://github.com/jupyter/nbgrader>`_ for administering the labs and homeworks. More details will be provided in the class. 
+We will use the `Jupyter nbgrader <https://github.com/jupyter/nbgrader>`_ for administering the labs and homeworks. 
+
+The server for this class is - `https://eas503.ccr.buffalo.edu <https://eas503.ccr.buffalo.edu>`_. More details about the submission will be provided in the class. 
 
 Expectations
 -------------
