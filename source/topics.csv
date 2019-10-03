@@ -10,7 +10,7 @@
 ,`Data Collections <https://mcsp.wartburg.edu/zelle/python/ppics3/slides/Chapter11.pptx>`_,
 5,`Object- Oriented Design <https://mcsp.wartburg.edu/zelle/python/ppics3/slides/Chapter12.pptx>`_,:red:`Homework 4` 
 6,**Catch up week**,:red:`Homework 5`
-7,`Introduction to Databases <DBIntroduction.pdf>`_,:red:`Homework 6`; :blue:`Lab 2`
+7,`Introduction to Databases <DBIntroduction.pdf>`,:red:`Homework 6`; :blue:`Lab 2`
 8,Using Database SQLite,:red:`Homework 7`
 9,Integrating DB with Python,:red:`Homework 8`
 10,Working with data (``numpy`` and ``pandas``),:red:`Homework 9`; :blue:`Lab 3`
