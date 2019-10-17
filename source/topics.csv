@@ -11,7 +11,7 @@
 5,`Object- Oriented Design <https://mcsp.wartburg.edu/zelle/python/ppics3/slides/Chapter12.pptx>`_,:red:`Homework 4` 
 6,**Catch up week**,:red:`Homework 5`
 7,:download:`Introduction to Databases <DBIntroduction.pdf>`,:red:`Homework 6`; :blue:`Lab 2`
-8,`Using Database SQLite <SQLiteBasics.slides.html>`_,:red:`Homework 7`
+8,:download:`Using Database SQLite <SQLiteBasics.slides.html>`,:red:`Homework 7`
 9,Integrating DB with Python,:red:`Homework 8`
 10,Working with data (``numpy`` and ``pandas``),:red:`Homework 9`; :blue:`Lab 3`
 11,Visualizing data (``matplotlib`` and ``seaborn``),:red:`Homework 10`
