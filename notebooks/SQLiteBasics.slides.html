@@ -13359,12 +13359,101 @@ a.anchor-link {
 
 </div>
 </div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="SQLite3-environment">SQLite3 environment<a class="anchor-link" href="#SQLite3-environment">&#182;</a></h1><h2 id="More-Useful-Commands">More Useful Commands<a class="anchor-link" href="#More-Useful-Commands">&#182;</a></h2><table>
+<thead><tr>
+<th style="text-align:center">Command</th>
+<th style="text-align:center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">.cd DIRECTORY</td>
+<td style="text-align:center">Change the working directory to DIRECTORY</td>
+</tr>
+<tr>
+<td style="text-align:center">.clone NEWDB</td>
+<td style="text-align:center">Clone data into NEWDB from the existing database</td>
+</tr>
+<tr>
+<td style="text-align:center">.databases</td>
+<td style="text-align:center">List names and files of attached databases</td>
+</tr>
+<tr>
+<td style="text-align:center">.dump ?TABLE? ...</td>
+<td style="text-align:center">Render all database content as SQL</td>
+</tr>
+<tr>
+<td style="text-align:center">.excel</td>
+<td style="text-align:center">Display the output of next command in a spreadsheet</td>
+</tr>
+<tr>
+<td style="text-align:center">.headers on |of</td>
+<td style="text-align:center">Turn display of headers on or off</td>
+</tr>
+<tr>
+<td style="text-align:center">.import FILE TABLE</td>
+<td style="text-align:center">Import data from FILE into TABLE</td>
+</tr>
+<tr>
+<td style="text-align:center">.mode MODE ?TABLE?</td>
+<td style="text-align:center">Set output mode</td>
+</tr>
+<tr>
+<td style="text-align:center">.open ?OPTIONS? ?FILE?</td>
+<td style="text-align:center">Close existing database and reopen FILE</td>
+</tr>
+<tr>
+<td style="text-align:center">.output ?FILE?</td>
+<td style="text-align:center">Send output to FILE or stdout if FILE is omitted</td>
+</tr>
+<tr>
+<td style="text-align:center">.quit</td>
+<td style="text-align:center">Exit this program</td>
+</tr>
+<tr>
+<td style="text-align:center">.read FILE</td>
+<td style="text-align:center">Read input from FILE</td>
+</tr>
+<tr>
+<td style="text-align:center">.restore ?DB? FILE</td>
+<td style="text-align:center">Restore content of DB (default "main") from FILE</td>
+</tr>
+<tr>
+<td style="text-align:center">.save FILE</td>
+<td style="text-align:center">Write in-memory database into FILE</td>
+</tr>
+<tr>
+<td style="text-align:center">.schema ?PATTERN?</td>
+<td style="text-align:center">Show the CREATE statements matching PATTERN</td>
+</tr>
+<tr>
+<td style="text-align:center">.separator COL ?ROW?</td>
+<td style="text-align:center">Change the column and row separators</td>
+</tr>
+<tr>
+<td style="text-align:center">.tables ?TABLE?</td>
+<td style="text-align:center">List names of tables matching LIKE pattern TABLE</td>
+</tr>
+<tr>
+<td style="text-align:center">.width NUM1 NUM2 ...</td>
+<td style="text-align:center">Set column widths for "column" mode</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Creating-tables">Creating tables<a class="anchor-link" href="#Creating-tables">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">movies</span><span class="p">(</span>
-  <span class="p">....</span>
+    <span class="k">column_name</span> <span class="n">column_type</span> <span class="k">constraints</span><span class="p">,</span>
+    <span class="p">...</span>
   <span class="p">)</span>
 </pre></div>
 
@@ -13432,10 +13521,145 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Loading-data">Loading data<a class="anchor-link" href="#Loading-data">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">tablename</span> <span class="k">VALUES</span> <span class="p">();</span>
+<h1 id="Adding-Constraints">Adding Constraints<a class="anchor-link" href="#Adding-Constraints">&#182;</a></h1>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="NOT-NULL-Constraint">NOT NULL Constraint<a class="anchor-link" href="#NOT-NULL-Constraint">&#182;</a></h1><ul>
+<li>Allows you to specify that a column will not permit NULL values<div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">movies</span><span class="p">(</span>
+  <span class="n">movieid</span> <span class="nb">INTEGER</span><span class="p">,</span>
+  <span class="n">moviename</span> <span class="nb">TEXT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">);</span>
+</pre></div>
+</li>
+<li>Column moviename will not permit null values</li>
+<li>Try
+<pre><code>INSERT INTO movies (movieid) VALUES (2);</code></pre>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="UNIQUE-Constraint">UNIQUE Constraint<a class="anchor-link" href="#UNIQUE-Constraint">&#182;</a></h1><ul>
+<li>Allows you to specify that a column will not permit duplicate values<div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">movies</span><span class="p">(</span>
+  <span class="n">movieid</span> <span class="nb">INTEGER</span><span class="p">,</span>
+  <span class="n">moviename</span> <span class="nb">TEXT</span> <span class="k">UNIQUE</span><span class="p">);</span>
+</pre></div>
+</li>
+<li>Column moviename will not permit null values</li>
+<li>Try
+<pre><code>INSERT INTO movies (movieid,moviename) VALUES (2,'Titanic');
+INSERT INTO movies (movieid,moviename) VALUES (2,'Avengers');
+INSERT INTO movies (movieid,moviename) VALUES (3,'Titanic');</code></pre>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="CHECK">CHECK<a class="anchor-link" href="#CHECK">&#182;</a></h1><ul>
+<li>Allows checks on columns during insert or update time
+<pre><code>CREATE TABLE movies(
+  movieid INTEGER,
+  moviename TEXT UNIQUE CHECK length(moviename) &gt; 3);</code></pre>
+</li>
+<li>Only permits moviename column values that are longer than 2 characters<ul>
+<li>can combine this with other functions besides <code>length()</code></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Primary-Keys">Primary Keys<a class="anchor-link" href="#Primary-Keys">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">movies</span><span class="p">(</span>
+    <span class="n">id</span> <span class="nb">INTEGER</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">name</span> <span class="nb">TEXT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">);</span>
+</pre></div>
+<p>or</p>
+<div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">movies</span><span class="p">(</span>
+    <span class="n">id</span> <span class="nb">INTEGER</span><span class="p">,</span>
+    <span class="n">name</span> <span class="nb">TEXT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">(</span><span class="n">id</span><span class="p">));</span>
 </pre></div>
 <ul>
-<li>Can also use <code>.import</code> to read from csv</li>
+<li>Will get automatically assigned an id during INSERT if none provided<div class="highlight"><pre><span></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">movies</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="k">VALUES</span><span class="p">(</span><span class="s1">&#39;Shawshank Redemption&#39;</span><span class="p">);</span>
+</pre></div>
+or<div class="highlight"><pre><span></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">movies</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;Shawshank Redemption&#39;</span><span class="p">);</span>
+</pre></div>
+<blockquote><p>The auto-increment only happens if the primary key is an INTEGER.</p>
+</blockquote>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Creating-Relationships">Creating Relationships<a class="anchor-link" href="#Creating-Relationships">&#182;</a></h1><ul>
+<li>You can specify relationships among multiple tables in the same database</li>
+<li>Consider the following database schema:</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">movies</span><span class="p">(</span>
+    <span class="n">movieid</span> <span class="nb">INTEGER</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">moviename</span> <span class="nb">TEXT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">);</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">actors</span><span class="p">(</span>
+    <span class="n">actorid</span> <span class="nb">INTEGER</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">actorname</span> <span class="nb">TEXT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">);</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">actedIn</span><span class="p">(</span>
+    <span class="n">rowid</span> <span class="nb">INTEGER</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">actorid</span> <span class="nb">INTEGER</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">movieid</span> <span class="nb">INTEGER</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="k">FOREIGN</span> <span class="k">KEY</span><span class="p">(</span><span class="n">movieid</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">movies</span><span class="p">(</span><span class="n">movieid</span><span class="p">)</span>
+    <span class="k">FOREIGN</span> <span class="k">KEY</span><span class="p">(</span><span class="n">actorid</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">actors</span><span class="p">(</span><span class="n">actorid</span><span class="p">));</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="What-do-FOREIGN-KEYs-accomplish?">What do FOREIGN KEYs accomplish?<a class="anchor-link" href="#What-do-FOREIGN-KEYs-accomplish?">&#182;</a></h1><ul>
+<li>Give a sense of relationships (entity-relationship)</li>
+<li>Constraints on deletes and updates<blockquote><p>Try deleting or updating a row with a foreign key constraint</p>
+</blockquote>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="PRAGMA-Directives">PRAGMA Directives<a class="anchor-link" href="#PRAGMA-Directives">&#182;</a></h1><ul>
+<li>SQL extension supported by SQLite</li>
+<li>Modify operation of the SQLite library</li>
+<li>Or, query the SQLite library for internal (non-table) data<blockquote><p>We will not worry about these much except for one:</p>
+<div class="highlight"><pre><span></span><span class="n">PRAGMA</span> <span class="n">foreign_keys</span> <span class="o">=</span> <span class="k">ON</span><span class="p">;</span>
+</pre></div>
+<ul>
+<li>Without executing this pragma directive, the foreign key constraints will not be enforced</li>
+</ul>
+</blockquote>
+</li>
 </ul>
 
 </div>
@@ -13444,18 +13668,847 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="SQLite3-environment">SQLite3 environment<a class="anchor-link" href="#SQLite3-environment">&#182;</a></h1><h2 id="More-Commands">More Commands<a class="anchor-link" href="#More-Commands">&#182;</a></h2><ul>
-<li>.separator</li>
-<li>.mode</li>
-<li>.header ON</li>
-<li>.save</li>
-<li>.import</li>
-<li>.quit</li>
+<h1 id="Loading-data">Loading data<a class="anchor-link" href="#Loading-data">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">tablename</span> <span class="k">VALUES</span> <span class="p">();</span>
+</pre></div>
+<ul>
+<li>Can also use <code>.import</code> to read from csv from the sqlite3 prompt</li>
+</ul>
+<div class="highlight"><pre><span></span>.import filename.csv tablename
+</pre></div>
+<blockquote><p>Make sure that the sqlite3 separator matches the separator used by the csv file</p>
+<div class="highlight"><pre><span></span>.separator <span class="s1">&#39;,&#39;</span>
+</pre></div>
+</blockquote>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Querying-data">Querying data<a class="anchor-link" href="#Querying-data">&#182;</a></h1><ul>
+<li>We will use the <code>employees.db</code> database from here on<div class="highlight"><pre><span></span>sqlite3 employees.db
+.read settings.sql -- this is to load some display preferences
+.tables
+</pre></div>
+</li>
+</ul>
+<h2 id="Simplest-SQL-query">Simplest SQL query<a class="anchor-link" href="#Simplest-SQL-query">&#182;</a></h2><ul>
+<li>SELECT by itself is just asking SQLite to execute the statement that comes after. So you can also do:<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="mi">4</span><span class="o">+</span><span class="mi">4</span><span class="p">;</span>
+<span class="k">SELECT</span> <span class="mi">8</span><span class="o">*</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="o">/</span><span class="mi">4</span><span class="p">;</span>
+</pre></div>
+</li>
+<li>Output for a SELECT statement is also a table that can then be saved or queried further</li>
+<li>We use SELECT to query a table<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">employees</span>
+</pre></div>
+<blockquote><p>Note that the output will be dumped on the screen. Since this table has a large number of rows, you can limit the output by:</p>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">employees</span> <span class="k">LIMIT</span> <span class="mi">10</span>
+</pre></div>
+</blockquote>
+</li>
 </ul>
 
 </div>
 </div>
-</div></section></section>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="A-Full-SELECT-Query">A Full SELECT Query<a class="anchor-link" href="#A-Full-SELECT-Query">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="n">column_list</span>
+<span class="k">FROM</span> <span class="n">table_list</span>
+  <span class="k">JOIN</span> <span class="k">table</span> <span class="k">ON</span> <span class="n">join_condition</span>
+<span class="k">WHERE</span> <span class="n">row_filter</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="k">column</span>
+<span class="k">LIMIT</span> <span class="k">count</span> <span class="k">OFFSET</span> <span class="k">offset</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="k">column</span>
+<span class="k">HAVING</span> <span class="n">group_filter</span><span class="p">;</span>
+</pre></div>
+<ul>
+<li>We will look at each one of these options one by one</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Specifying-Output-Columns">Specifying Output Columns<a class="anchor-link" href="#Specifying-Output-Columns">&#182;</a></h1><ul>
+<li>Also known as the projection part of the query</li>
+<li>Specify which columns we want, possible renaming of the columns, and even some functions applied to the columns</li>
+</ul>
+<h2 id="Examples">Examples<a class="anchor-link" href="#Examples">&#182;</a></h2><ul>
+<li><p>Return all columns from the table <code>dept_manager</code></p>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">dept_manager</span>
+</pre></div>
+<blockquote><p>Note: avoid in real applications</p>
+</blockquote>
+</li>
+<li><p>Only returns the column <code>dept_no</code></p>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">dept_no</span> <span class="k">FROM</span> <span class="n">dept_manager</span>
+</pre></div>
+</li>
+<li>Rename the column<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">dept_no</span> <span class="k">as</span> <span class="n">department</span> <span class="k">FROM</span> <span class="n">dept_manager</span>
+</pre></div>
+</li>
+<li>Get distinct row values only<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="n">dept_no</span> <span class="k">as</span> <span class="n">department</span> <span class="k">FROM</span> <span class="n">dept_manager</span>
+</pre></div>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Using-built-in-SQLite-functions">Using built-in SQLite functions<a class="anchor-link" href="#Using-built-in-SQLite-functions">&#182;</a></h1><ul>
+<li>Commonly used functions: count, min, max</li>
+<li>Example: count the number of employees<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">employees</span>
+</pre></div>
+</li>
+<li>Find the lowest salary in the entire database<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">min</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">employees</span>
+</pre></div>
+<blockquote><p>Built-in functions can also be used in the WHERE clauses, as we will see later</p>
+</blockquote>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Ordering-output-(ORDER-BY)">Ordering output (ORDER BY)<a class="anchor-link" href="#Ordering-output-(ORDER-BY)">&#182;</a></h1><ul>
+<li><p>Get all managers sorted by start time</p>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">dept_manager</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">from_date</span>
+</pre></div>
+</li>
+<li><p>Get all managers sorted by start time (in decreasing order)</p>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">dept_manager</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">from_date</span> <span class="k">DESC</span>
+</pre></div>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Limiting-output-(LIMIT)">Limiting output (LIMIT)<a class="anchor-link" href="#Limiting-output-(LIMIT)">&#182;</a></h1><ul>
+<li>Get only the first few rows <div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">employees</span> <span class="k">LIMIT</span> <span class="mi">10</span>
+</pre></div>
+</li>
+<li>Get only the first few rows starting from an offset<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">employees</span> <span class="k">LIMIT</span> <span class="mi">10</span> <span class="k">OFFSET</span> <span class="mi">4</span>
+</pre></div>
+</li>
+<li>The last statement will print 10 rows starting from the 5th row</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Combining-ORDER-BY-and-LIMIT">Combining ORDER BY and LIMIT<a class="anchor-link" href="#Combining-ORDER-BY-and-LIMIT">&#182;</a></h1><ul>
+<li><p>Find the 10 oldest employees (by age)</p>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">employees</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">birth_date</span> <span class="k">limit</span> <span class="mi">10</span>
+</pre></div>
+</li>
+<li><p>Find the 10 most recently hired employees</p>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">employees</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">hire_date</span> <span class="k">DESC</span> <span class="k">limit</span> <span class="mi">10</span>
+</pre></div>
+</li>
+<li><p>Find the second most recently hired employee in the database</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">employees</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">hire_date</span> <span class="k">DESC</span> <span class="k">LIMIT</span> <span class="mi">1</span> <span class="k">OFFSET</span> <span class="mi">1</span>
+</pre></div>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Filtering-output-(WHERE)">Filtering output (WHERE)<a class="anchor-link" href="#Filtering-output-(WHERE)">&#182;</a></h1><ul>
+<li>Filter rows from a select query based on some condition</li>
+<li><p>Find salaries that are greater than 150,000</p>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">salaries</span> <span class="k">WHERE</span> <span class="n">salary</span> <span class="o">&gt;</span> <span class="mi">150000</span>
+</pre></div>
+<blockquote><p>You can also use the WHERE clause with DELETE and UPDATE conditions</p>
+</blockquote>
+</li>
+<li><p>Can use two types of conditional statements in the WHERE clause</p>
+<ol>
+<li>Comparison: =, != (or &lt;&gt;), &lt;, &lt;=, &gt;, &gt;= </li>
+<li>Logical: AND, OR, NOT, BETWEEN, EXISTS, IN, LIKE</li>
+</ol>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Examples">Examples<a class="anchor-link" href="#Examples">&#182;</a></h1><ul>
+<li>Find employees who were born after 1965 and hired before 1986<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">employees</span> <span class="k">WHERE</span> <span class="n">birth_date</span> <span class="o">&gt;</span> <span class="s1">&#39;1965-01-01&#39;</span> <span class="k">AND</span> <span class="n">hire_date</span> <span class="o">&lt;</span> <span class="s1">&#39;1986-01-01&#39;</span><span class="p">;</span>
+</pre></div>
+</li>
+<li>Find employees who were born in the 50s<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">employees</span> <span class="k">WHERE</span> <span class="n">birth_date</span> <span class="k">BETWEEN</span> <span class="s1">&#39;1950-01-01&#39;</span>  <span class="k">AND</span> <span class="s1">&#39;1960-01-01&#39;</span><span class="p">;</span>
+</pre></div>
+</li>
+<li>Find employees whose last name is either Reeker or Esposito<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">employees</span> <span class="k">WHERE</span> <span class="n">last_name</span> <span class="k">IN</span> <span class="p">(</span><span class="s1">&#39;Reeker&#39;</span><span class="p">,</span><span class="s1">&#39;Esposito&#39;</span><span class="p">)</span>
+</pre></div>
+</li>
+<li>Find employees whose last name starts with A<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">employees</span> <span class="k">WHERE</span> <span class="n">last_name</span> <span class="k">LIKE</span> <span class="s1">&#39;A%&#39;</span>
+</pre></div>
+</li>
+<li>We will see the use of <code>EXISTS</code> when we discuss subqueries</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="More-about-LIKE">More about LIKE<a class="anchor-link" href="#More-about-LIKE">&#182;</a></h1><ul>
+<li>Can use <code>LIKE</code> with a <code>%</code> or a <code>_</code> (single character match)<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">employees</span> <span class="k">WHERE</span> <span class="n">last_name</span> <span class="k">LIKE</span> <span class="s1">&#39;A_pin&#39;</span>
+</pre></div>
+</li>
+<li><code>LIKE</code> is case-insensitive</li>
+<li>Can use the following PRAGMA directive to enforce case-sensitive matching<div class="highlight"><pre><span></span><span class="n">PRAGMA</span> <span class="n">case_sensitive_like</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+</pre></div>
+</li>
+<li>Try the following:<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">employees</span> <span class="k">WHERE</span> <span class="n">first_name</span> <span class="k">LIKE</span> <span class="s1">&#39;%Arc%&#39;</span><span class="p">;</span>
+<span class="n">PRAGMA</span> <span class="n">case_sensitive_like</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">employees</span> <span class="k">WHERE</span> <span class="n">first_name</span> <span class="k">LIKE</span> <span class="s1">&#39;%Arc%&#39;</span><span class="p">;</span>
+</pre></div>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Grouping-data">Grouping data<a class="anchor-link" href="#Grouping-data">&#182;</a></h1><ul>
+<li><code>GROUP BY</code> - An optional clause to a <code>SELECT</code> statement</li>
+<li>Group rows by the values of a certain set of columns</li>
+<li>Returns one row per group</li>
+<li>Allows aggregate functions to be applied to each group (<code>min</code>, <code>max</code>, <code>sum</code>, <code>count</code>, <code>avg</code></li>
+<li>Find the distinct last names of the employees and the counts for each last name<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">last_name</span><span class="p">,</span> <span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">employees</span> <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">last_name</span><span class="p">;</span>
+</pre></div>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="More-examples">More examples<a class="anchor-link" href="#More-examples">&#182;</a></h1><ul>
+<li>Find the oldest employee for each distinct last name</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">last_name</span><span class="p">,</span> <span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="k">min</span><span class="p">(</span><span class="n">birth_date</span><span class="p">)</span> 
+<span class="k">FROM</span> <span class="n">employees</span> 
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">last_name</span><span class="p">;</span>
+</pre></div>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="More-examples">More examples<a class="anchor-link" href="#More-examples">&#182;</a></h1><ul>
+<li>Find the most frequent last name</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">last_name</span><span class="p">,</span> <span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">as</span> <span class="n">freq</span> 
+<span class="k">FROM</span> <span class="n">employees</span> 
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">last_name</span> 
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">freq</span> <span class="k">DESC</span> <span class="k">LIMIT</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Adding-HAVING-to-the-GROUP-BY-Clause">Adding HAVING to the GROUP BY Clause<a class="anchor-link" href="#Adding-HAVING-to-the-GROUP-BY-Clause">&#182;</a></h1><ul>
+<li>Allows filtering out groups that do not match a certain aggregate criterion</li>
+<li>Example: Find out all the unique last names such that at least 40 people have that last name<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">last_name</span><span class="p">,</span> <span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">as</span> <span class="n">freq</span> 
+<span class="k">FROM</span> <span class="n">employees</span> 
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">last_name</span> 
+<span class="k">HAVING</span> <span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">40</span>
+</pre></div>
+</li>
+<li>Find all employees whose average salary was greater than 120000</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">emp_no</span><span class="p">,</span> <span class="k">avg</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> 
+<span class="k">FROM</span> <span class="n">salaries</span> 
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">emp_no</span> 
+<span class="k">HAVING</span> <span class="k">avg</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">120000</span><span class="p">;</span>
+</pre></div>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Joining-Tables">Joining Tables<a class="anchor-link" href="#Joining-Tables">&#182;</a></h1><ul>
+<li>A fundamental operation in databases (connecting multiple tables)<ol>
+<li>INNER JOIN</li>
+<li>LEFT JOIN</li>
+<li>CROSS JOIN</li>
+<li><del>RIGHT JOIN</del></li>
+<li><del>FULL OUTER JOIN</del></li>
+</ol>
+</li>
+<li>General syntax<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">a</span><span class="p">.</span><span class="n">columns</span><span class="p">,</span><span class="n">b</span><span class="p">.</span><span class="n">columns</span>
+<span class="k">FROM</span> <span class="k">table</span> <span class="n">a</span>
+<span class="o">&lt;</span><span class="n">JOINTYPE</span><span class="o">&gt;</span> <span class="k">JOIN</span> <span class="k">table</span> <span class="n">b</span> <span class="k">ON</span> <span class="n">a</span><span class="p">.</span><span class="n">joiningcolumn</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="n">joiningcolumn</span>
+</pre></div>
+</li>
+<li>Can join on more than two tables (first one will be the left table)</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="INNER-JOIN">INNER JOIN<a class="anchor-link" href="#INNER-JOIN">&#182;</a></h1><ul>
+<li>Most widely used flavor of join</li>
+<li>Return rows from left and right tables which match the join criterion</li>
+<li>If both tables have the same column name in the ON clause, you can use <code>USING</code> clause instead of <code>ON</code></li>
+<li><p>Example: find name and salaries of all employees</p>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">e</span><span class="p">.</span><span class="n">first_name</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">last_name</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">emp_no</span><span class="p">,</span> <span class="n">s</span><span class="p">.</span><span class="n">salary</span>
+<span class="k">FROM</span> <span class="n">employees</span> <span class="n">e</span>
+<span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">salaries</span> <span class="n">s</span> <span class="k">ON</span> <span class="n">e</span><span class="p">.</span><span class="n">emp_no</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">emp_no</span>
+</pre></div>
+<p>or</p>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">e</span><span class="p">.</span><span class="n">first_name</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">last_name</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">emp_no</span><span class="p">,</span> <span class="n">s</span><span class="p">.</span><span class="n">salary</span>
+<span class="k">FROM</span> <span class="n">employees</span> <span class="n">e</span>
+<span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">salaries</span> <span class="n">s</span> <span class="k">USING</span><span class="p">(</span><span class="n">emp_no</span><span class="p">)</span>
+</pre></div>
+</li>
+<li><p>Question: What if there is an employee who never drew a salary?</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Another-example">Another example<a class="anchor-link" href="#Another-example">&#182;</a></h1><ul>
+<li>Find the current salary for the manager of each department</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">m</span><span class="p">.</span><span class="n">emp_no</span><span class="p">,</span> <span class="n">m</span><span class="p">.</span><span class="n">dept_no</span><span class="p">,</span> <span class="n">s</span><span class="p">.</span><span class="n">salary</span>
+<span class="k">FROM</span> <span class="n">dept_manager</span> <span class="n">m</span> 
+<span class="k">JOIN</span> <span class="n">salaries</span> <span class="n">s</span> <span class="k">USING</span><span class="p">(</span><span class="n">emp_no</span><span class="p">)</span> 
+<span class="k">WHERE</span> <span class="n">m</span><span class="p">.</span><span class="n">to_date</span> <span class="o">=</span> <span class="s1">&#39;9999-01-01&#39;</span> <span class="k">AND</span> <span class="n">s</span><span class="p">.</span><span class="n">to_date</span><span class="o">=</span><span class="s1">&#39;9999-01-01&#39;</span><span class="p">;</span>
+</pre></div>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Another-example">Another example<a class="anchor-link" href="#Another-example">&#182;</a></h1><ul>
+<li><p>For each employee find the dept_o that they were manager of (hint: use the <code>dept_manager</code> table)</p>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">e</span><span class="p">.</span><span class="n">first_name</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">last_name</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">emp_no</span><span class="p">,</span> <span class="n">d</span><span class="p">.</span><span class="n">dept_no</span>
+<span class="k">FROM</span> <span class="n">employees</span> <span class="n">e</span>
+<span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">dept_manager</span> <span class="n">d</span> <span class="k">ON</span> <span class="n">e</span><span class="p">.</span><span class="n">emp_no</span> <span class="o">=</span> <span class="n">d</span><span class="p">.</span><span class="n">emp_no</span>
+</pre></div>
+</li>
+<li><p>What about the employees who were never managers?</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="LEFT-JOIN">LEFT JOIN<a class="anchor-link" href="#LEFT-JOIN">&#182;</a></h1><ul>
+<li>Returns all rows from the left table along with the matching row from the right tables (if the join condition matches) or null<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">e</span><span class="p">.</span><span class="n">first_name</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">last_name</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">emp_no</span><span class="p">,</span> <span class="n">d</span><span class="p">.</span><span class="n">dept_no</span>
+<span class="k">FROM</span> <span class="n">employees</span> <span class="n">e</span>
+<span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">dept_manager</span> <span class="n">d</span> <span class="k">ON</span> <span class="n">e</span><span class="p">.</span><span class="n">emp_no</span> <span class="o">=</span> <span class="n">d</span><span class="p">.</span><span class="n">emp_no</span>
+</pre></div>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="CROSS-JOIN">CROSS JOIN<a class="anchor-link" href="#CROSS-JOIN">&#182;</a></h1><ul>
+<li>Returns all rows of the left table combined with all rows of the right table (a cartesian product)</li>
+<li>Obviously there will not be any join condition (no <code>ON</code> or <code>USING</code>)</li>
+<li>For example:<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">d</span><span class="p">.</span><span class="o">*</span><span class="p">,</span><span class="n">m</span><span class="p">.</span><span class="o">*</span> 
+<span class="k">FROM</span> <span class="n">departments</span> <span class="n">d</span> 
+<span class="k">CROSS</span> <span class="k">JOIN</span> <span class="n">dept_manager</span> <span class="n">m</span><span class="p">;</span>
+</pre></div>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Subqueries">Subqueries<a class="anchor-link" href="#Subqueries">&#182;</a></h1><ul>
+<li>A <code>SELECT</code> statement nested in another statement</li>
+<li>Two typical uses<ol>
+<li>Nested subquery in a <code>WHERE</code> clause<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">col1</span>
+<span class="k">FROM</span> <span class="n">table1</span>
+<span class="k">WHERE</span> <span class="n">col1</span> <span class="o">=</span> <span class="p">(</span>
+ <span class="k">SELECT</span> <span class="n">col2</span>
+ <span class="k">FROM</span> <span class="n">table2</span>
+<span class="p">)</span>
+</pre></div>
+</li>
+<li>Nest subquery in a <code>FROM</code> clause<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">table1</span><span class="p">.</span><span class="n">col1</span>
+<span class="k">FROM</span><span class="p">(</span>
+ <span class="k">SELECT</span> <span class="n">col2</span>
+ <span class="k">FROM</span> <span class="n">table2</span>
+ <span class="p">)</span> <span class="n">table1</span>
+</pre></div>
+</li>
+</ol>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Nested-subqueries-in-a-WHERE-clause">Nested subqueries in a <code>WHERE</code> clause<a class="anchor-link" href="#Nested-subqueries-in-a-WHERE-clause">&#182;</a></h1><ul>
+<li>Depending on the number of rows returned by the sub-query you can either use comparisons (if number of rows is 1) or <code>IN</code> or <code>EXISTS</code></li>
+<li>Example: find all oldest employees<ul>
+<li>Two sub-problems here:<ol>
+<li>First find the earliest birthdate, and</li>
+<li>Find all employees with birthdate equal to that date</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">e</span><span class="p">.</span><span class="n">first_name</span><span class="p">,</span><span class="n">e</span><span class="p">.</span><span class="n">last_name</span>
+<span class="k">FROM</span> <span class="n">employees</span> <span class="n">e</span>
+<span class="k">WHERE</span> <span class="n">e</span><span class="p">.</span><span class="n">birth_date</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="k">SELECT</span> <span class="k">min</span><span class="p">(</span><span class="n">birth_date</span><span class="p">)</span>
+    <span class="k">FROM</span> <span class="n">employees</span> <span class="n">e</span>
+    <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Another-example">Another example<a class="anchor-link" href="#Another-example">&#182;</a></h1><ul>
+<li>Find all managers who make less than current average salary of all employees<ul>
+<li>What is the current average salary for all employees?</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">avg</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="n">salaries</span> 
+<span class="k">WHERE</span> <span class="n">to_date</span><span class="o">=</span><span class="s1">&#39;9999-01-01&#39;</span><span class="p">;</span>
+</pre></div>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>full query<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">m</span><span class="p">.</span><span class="n">emp_no</span><span class="p">,</span> <span class="n">m</span><span class="p">.</span><span class="n">dept_no</span><span class="p">,</span> <span class="n">s</span><span class="p">.</span><span class="n">salary</span>
+<span class="k">FROM</span> <span class="n">dept_manager</span> <span class="n">m</span> 
+<span class="k">JOIN</span> <span class="n">salaries</span> <span class="n">s</span> <span class="k">USING</span><span class="p">(</span><span class="n">emp_no</span><span class="p">)</span> 
+<span class="k">WHERE</span> <span class="n">m</span><span class="p">.</span><span class="n">to_date</span> <span class="o">=</span> <span class="s1">&#39;9999-01-01&#39;</span>
+<span class="k">AND</span> <span class="n">s</span><span class="p">.</span><span class="n">to_date</span><span class="o">=</span><span class="s1">&#39;9999-01-01&#39;</span>
+<span class="k">AND</span> <span class="n">salary</span> <span class="o">&gt;</span> <span class="p">(</span>
+  <span class="k">SELECT</span> <span class="k">avg</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span>
+  <span class="k">FROM</span> <span class="n">salaries</span> 
+  <span class="k">WHERE</span> <span class="n">to_date</span><span class="o">=</span><span class="s1">&#39;9999-01-01&#39;</span>
+  <span class="p">)</span>
+</pre></div>
+</li>
+</ul>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Using-IN">Using <code>IN</code><a class="anchor-link" href="#Using-IN">&#182;</a></h1><ul>
+<li>If a subquery returns more than one row, then comparison will not work</li>
+<li>You can use <code>IN</code> to check the membership</li>
+<li>Example: Find the count of all employees who have ever worked in one of the roles as employee number 499617 (Hint: use the <code>titles</code> table)</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span> <span class="n">t</span><span class="p">.</span><span class="n">emp_no</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="n">titles</span> <span class="n">t</span>
+<span class="k">WHERE</span> <span class="n">t</span><span class="p">.</span><span class="n">title</span> <span class="k">IN</span> <span class="p">(</span>
+    <span class="k">SELECT</span> <span class="n">title</span> <span class="k">FROM</span> <span class="n">titles</span> <span class="k">WHERE</span> <span class="n">emp_no</span> <span class="o">=</span> <span class="mi">499617</span>
+<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Using-EXIST">Using <code>EXIST</code><a class="anchor-link" href="#Using-EXIST">&#182;</a></h1><ul>
+<li>Allows for checking if the output of a query is empty or not</li>
+<li>Example: Find all current managers who have ever worked something besides a manager<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">m</span><span class="p">.</span><span class="n">emp_no</span>
+<span class="k">FROM</span> <span class="n">dept_manager</span> <span class="n">m</span>
+<span class="k">WHERE</span> <span class="k">EXISTS</span> <span class="p">(</span>
+  <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">titles</span> <span class="n">t</span> <span class="k">WHERE</span> <span class="n">t</span><span class="p">.</span><span class="n">emp_no</span> <span class="o">=</span> <span class="n">m</span><span class="p">.</span><span class="n">emp_no</span> <span class="k">AND</span> <span class="n">t</span><span class="p">.</span><span class="n">title</span> <span class="o">&lt;&gt;</span> <span class="s1">&#39;Manager&#39;</span> 
+  <span class="p">)</span>
+</pre></div>
+</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>If we want to get the titles and names of those managers we can nest the above query<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">e</span><span class="p">.</span><span class="n">first_name</span><span class="p">,</span><span class="n">e</span><span class="p">.</span><span class="n">last_name</span><span class="p">,</span><span class="n">t</span><span class="p">.</span><span class="n">title</span>
+<span class="k">FROM</span> <span class="p">(</span><span class="k">SELECT</span> <span class="n">m</span><span class="p">.</span><span class="n">emp_no</span>
+<span class="k">FROM</span> <span class="n">dept_manager</span> <span class="n">m</span>
+<span class="k">WHERE</span> <span class="k">EXISTS</span> <span class="p">(</span>
+  <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">titles</span> <span class="n">t</span> <span class="k">WHERE</span> <span class="n">t</span><span class="p">.</span><span class="n">emp_no</span> <span class="o">=</span> <span class="n">m</span><span class="p">.</span><span class="n">emp_no</span> <span class="k">AND</span> <span class="n">t</span><span class="p">.</span><span class="n">title</span> <span class="o">&lt;&gt;</span> <span class="s1">&#39;Manager&#39;</span> 
+  <span class="p">))</span> <span class="n">mg</span>
+<span class="k">JOIN</span> <span class="n">employees</span> <span class="n">e</span> <span class="k">USING</span><span class="p">(</span><span class="n">emp_no</span><span class="p">)</span>
+<span class="k">JOIN</span> <span class="n">titles</span> <span class="n">t</span> <span class="k">USING</span><span class="p">(</span><span class="n">emp_no</span><span class="p">)</span>
+</pre></div>
+</li>
+<li>This is an example of a <strong>correlated</strong> subquery - the subquery is dependent on the parent query</li>
+<li>These are slower to run</li>
+</ul>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Nested-subqueries-in-a-FROM-clause">Nested subqueries in a <code>FROM</code> clause<a class="anchor-link" href="#Nested-subqueries-in-a-FROM-clause">&#182;</a></h1><ul>
+<li>Example: Find the most recent salary of all employees</li>
+<li>Remember that each employee might have several records in <code>salaries</code> table with <code>to_date</code></li>
+<li>The record with most recent <code>to_date</code> will indicate the last position</li>
+<li>Subquery - Get the record for each employee with most recent date<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">emp_no</span><span class="p">,</span><span class="k">max</span><span class="p">(</span><span class="n">to_date</span><span class="p">)</span> <span class="k">AS</span> <span class="n">to_date</span> 
+<span class="k">FROM</span> <span class="n">salaries</span> <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">emp_no</span>
+</pre></div>
+</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Using the output of the subquery as a table to join<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">max_salaries</span><span class="p">.</span><span class="n">emp_no</span><span class="p">,</span><span class="n">s</span><span class="p">.</span><span class="n">salary</span>
+<span class="k">FROM</span> <span class="p">(</span><span class="k">SELECT</span> <span class="n">emp_no</span><span class="p">,</span><span class="k">max</span><span class="p">(</span><span class="n">to_date</span><span class="p">)</span> <span class="k">AS</span> <span class="n">to_date</span> <span class="k">FROM</span> <span class="n">salaries</span> <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">emp_no</span><span class="p">)</span> <span class="n">max_salaries</span>
+<span class="k">JOIN</span> <span class="n">salaries</span> <span class="k">USING</span><span class="p">(</span><span class="n">emp_no</span><span class="p">,</span><span class="n">to_date</span><span class="p">)</span>
+</pre></div>
+</li>
+</ul>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Creating-intermediate-tables">Creating intermediate tables<a class="anchor-link" href="#Creating-intermediate-tables">&#182;</a></h1><ul>
+<li>Output of any query can be inserted into an existing table<ul>
+<li>As long as the schema matches<div class="highlight"><pre><span></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">employees_females</span> <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">employees</span> <span class="k">WHERE</span> <span class="n">gender</span> <span class="o">=</span> <span class="s1">&#39;F&#39;</span>
+</pre></div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Set-operators">Set operators<a class="anchor-link" href="#Set-operators">&#182;</a></h1><ul>
+<li>Operate on two query outputs (same schema is required)</li>
+<li>Consider each otput as a set of rows<ol>
+<li>Union</li>
+<li>Except</li>
+<li>Intersect</li>
+</ol>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Weekend-Problem">Weekend Problem<a class="anchor-link" href="#Weekend-Problem">&#182;</a></h1><ul>
+<li>Find all employees whose current salary is more than the current salary of their managers<ul>
+<li>Current salary of the current manager of each department</li>
+<li>Current salary of each employee</li>
+<li>Current salary of the current manager of each employee</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Indexes-in-SQLite">Indexes in SQLite<a class="anchor-link" href="#Indexes-in-SQLite">&#182;</a></h1><ul>
+<li><p>What are indexes?</p>
+<ul>
+<li>Data structures used to make queries faster</li>
+<li>Uses B-tree (Balanced) for organizing indexes</li>
+<li>You can define an index on one or more columns of a table</li>
+<li>You can have multiple indexes for the same table</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">INDEX</span> <span class="o">&lt;</span><span class="k">index</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+<span class="k">ON</span> <span class="o">&lt;</span><span class="k">table</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span><span class="p">(</span><span class="k">column</span><span class="o">-</span><span class="n">list</span><span class="p">)</span>
+</pre></div>
+</li>
+<li>Example:<div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">INDEX</span> <span class="n">employees_last_name</span>
+<span class="k">ON</span> <span class="n">employees</span><span class="p">(</span><span class="n">last_name</span><span class="p">)</span>
+</pre></div>
+</li>
+<li>You can delete indexes by using<div class="highlight"><pre><span></span><span class="k">DROP</span> <span class="k">INDEX</span> <span class="p">[</span><span class="k">IF</span> <span class="k">EXISTS</span><span class="p">]</span> <span class="o">&lt;</span><span class="k">index</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+</pre></div>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="When-to-create-Index">When to create Index<a class="anchor-link" href="#When-to-create-Index">&#182;</a></h1><ul>
+<li>Need to speed up queries</li>
+<li>Downside:<ul>
+<li>Size - index take space</li>
+<li>Insert/Update/Delete performance</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Calling-SQLite-from-Python">Calling SQLite from Python<a class="anchor-link" href="#Calling-SQLite-from-Python">&#182;</a></h1>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;/Users/chandola/Teaching/eascourse/eas503-ub/notebooks/employees_db/employees.db&#39;</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="c1"># do stuff</span>
+<span class="n">querystr</span> <span class="o">=</span> <span class="s1">&#39;SELECT COUNT(*) FROM employees&#39;</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">querystr</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">res</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(50019,)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;/Users/chandola/Teaching/eascourse/eas503-ub/notebooks/employees_db/employees.db&#39;</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="c1"># do stuff</span>
+<span class="n">querystr</span> <span class="o">=</span> <span class="s1">&#39;SELECT * FROM employees WHERE first_name LIKE &quot;A%&quot; LIMIT 10&#39;</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">querystr</span><span class="p">)</span>
+<span class="n">reslist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">res</span><span class="p">:</span>
+    <span class="n">reslist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">reslist</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">reslist</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">reslist</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10
+&lt;class &#39;tuple&#39;&gt;
+(10033, &#39;1956-11-14&#39;, &#39;Arif&#39;, &#39;Merlo&#39;, &#39;M&#39;, &#39;1987-03-18&#39;)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section></section>
 </div>
 </div>
 
