@@ -38,7 +38,7 @@ Meeting times and locations
 Office Hours
 -------------
 * Chandola Office Hours: Wednesdays, 1.00 PM - 3.00 PM, 213 Capen Hall.
-* Zia Office Hours: Tuesdays/Thursdays, 6-7PM, 126 Bell 
+* Zia Office Hours: Thursdays, 6:45-8PM, 126/127 Bell 
 * Liu Office Hours: TBA
 
 Prerequisites
