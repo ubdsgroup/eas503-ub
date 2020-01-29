@@ -45,8 +45,9 @@ None
 
 Course materials
 ----------------
-..`Jupyter Notebooks <https://github.com/ubdsgroup/eas503-ub/tree/master/notebooks>`_
-..`Jupyter Notebooks <https://github.com/mkzia/eas503>`_
+.. `Jupyter Notebooks <https://github.com/ubdsgroup/eas503-ub/tree/master/notebooks>`_
+`Jupyter Notebooks <https://github.com/mkzia/eas503>`_
+
 Online forum
 -------------
 Piazza Page - https://piazza.com/class/k5yka76g8se3y2
