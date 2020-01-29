@@ -13,7 +13,7 @@ Programming and Database Fundamentals for Data Scientists (EAS 503)
 
 `School of Engineering and Applied Sciences <http://www.seas.buffalo.edu/>`_, University at Buffalo 
 
-Fall Semester 2019
+Spring Semester 2020
 
 .. toctree::
    :maxdepth: 2
@@ -23,23 +23,21 @@ Fall Semester 2019
 Instructors
 ------------
 
-* `Varun Chandola <http://www.cse.buffalo.edu/~chandola>`_ (lead instructor; chandola[at]buffalo.edu)
+.. * `Varun Chandola <http://www.cse.buffalo.edu/~chandola>`_ (lead instructor; chandola[at]buffalo.edu)
 
 * `Mohammad Zia <http://www.buffalo.edu/ccr/about-us/people/staff/zia.html>`_ (co-lead instructor; mkzia[at]buffalo.edu)
 
-* `Jiarui Liu <http://www.buffalo.edu/computational-data-enabled-science-engineering.html>`_ (teaching assistant; jliu239[at]buffalo.edu)
+* `Betsy McCall <http://www.buffalo.edu/computational-data-enabled-science-engineering.html>`_ (teaching assistant; betsymcc[at]buffalo.edu)
 
 
 Meeting times and locations
 ----------------------------
-* Chandola: Tuesdays, Thursdays, 11.00 AM - 12.20 PM, 104 Knox Hall.
-* Zia: Wednesdays, 7.00 PM  - 9.50 PM, 04 Knox Hall.
+* Zia: Wednesdays, 7.00 PM  - 9.50 PM, Furnas 805.
 
 Office Hours
 -------------
-* Chandola Office Hours: Wednesdays, 1.00 PM - 3.00 PM, 213 Capen Hall.
 * Zia Office Hours: Thursdays, 6:45-8PM, 126/127 Bell 
-* Liu Office Hours: TBA
+* McCall Office Hours: TBA
 
 Prerequisites
 ---------------
@@ -47,11 +45,11 @@ None
 
 Course materials
 ----------------
-`Jupyter Notebooks <https://github.com/ubdsgroup/eas503-ub/tree/master/notebooks>`_
-
+..`Jupyter Notebooks <https://github.com/ubdsgroup/eas503-ub/tree/master/notebooks>`_
+..`Jupyter Notebooks <https://github.com/mkzia/eas503>`_
 Online forum
 -------------
-Piazza Page - https://piazza.com/class/jzsaki60rv25uu
+Piazza Page - https://piazza.com/class/k5yka76g8se3y2
 
 .. note:: 
 
@@ -78,7 +76,6 @@ Grading
 
 Final Exam
 ---------------
-* Chandola - 12/10/2019, Tuesday, 08.00 AM - 11.00 AM, Baldy 101/108
 * Zia - TBA 
 
 Class schedule
