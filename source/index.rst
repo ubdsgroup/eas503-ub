@@ -62,9 +62,9 @@ UBLearns - https://ublearns.buffalo.edu/webapps/blackboard/execute/modulepage/vi
 
 .. note:: 
 
-   We will use UBLearns to distribute grades and as a repository for the recorded classroom lectures.
+   We will use UBLearns to distribute grades.
 
-Course Texts
+Course Texts (Optional)
 ---------------
 * Python Programming: An Introduction to Computer Science, Zelle [ISBN-10: 1590280288]
 * Hector Garcia-Molina, Jeffrey D. Ullman, Jennifer D. Widom, Database Systems: The Complete Book
@@ -81,17 +81,7 @@ Final Exam
 
 Class schedule
 ---------------
-.. role:: red
-.. role:: blue 
-
-.. csv-table:: 
-   :file: topics.csv
-   :header: "Week", "Topic", "Deliverable"
-   :widths: 6, 24, 20
-
-.. note::
-
-   Homework 0 will not be graded.
+`Class Schedule <https://github.com/mkzia/eas503>`_
 
 How to submit homeworks
 ------------------------
