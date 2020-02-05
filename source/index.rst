@@ -58,7 +58,7 @@ Piazza Page - https://piazza.com/class/k5yka76g8se3y2
 
 Classroom management
 ---------------------
-UBLearns - https://ublearns.buffalo.edu/webapps/blackboard/execute/modulepage/view?course_id=_166080_1&cmp_tab_id=_179339_1&editMode=true&mode=cpview
+`UBLearns <https://ublearns.blackboard.com/webapps/blackboard/execute/courseMain?course_id=_170027_1>`_
 
 .. note:: 
 
