@@ -37,7 +37,7 @@ Meeting times and locations
 Office Hours
 -------------
 * Zia Office Hours: Thursdays, 6:45-8PM, 126/127 Bell 
-* McCall Office Hours: TBA
+* McCall Office Hours:  Thursdays 1-3 and 5-7 in Furnas 805.
 
 Prerequisites
 ---------------
@@ -72,12 +72,12 @@ Course Texts
 Grading
 ---------
 * Programming Labs (4) - 30%
-* Homeworks (12) - 40%
+* Homeworks (9 -- Maximum) - 40%
 * Final Project - 30%
 
 Final Exam
 ---------------
-* Zia - TBA 
+* NONE 
 
 Class schedule
 ---------------
