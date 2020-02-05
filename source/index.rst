@@ -72,7 +72,7 @@ Course Texts
 Grading
 ---------
 * Programming Labs (4) - 30%
-* Homeworks (9 -- Maximum) - 40%
+* Homeworks (10) - 40%
 * Final Project - 30%
 
 Final Exam
