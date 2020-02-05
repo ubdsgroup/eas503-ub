@@ -71,7 +71,7 @@ Course Texts (Optional)
 
 Grading
 ---------
-* Programming Labs (4) - 30%
+* Programming Labs (3) - 30%
 * Homeworks (10) - 40%
 * Final Project - 30%
 
