@@ -36,7 +36,7 @@ Meeting times and locations
 
 Office Hours
 -------------
-* Zia Office Hours: Thursdays, 6:45-8PM, Furnas 805 
+* Zia Office Hours: Tuesdays, 6:45-8PM, Furnas 805 
 * McCall Office Hours:  Thursdays 1-3 and 5-7 in Furnas 805.
 
 Prerequisites
